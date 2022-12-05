@@ -23,8 +23,13 @@ public class Time {
     }
 
     public void add(String time) {
-        int h = Integer.parseInt(time.substring(0,1));
-        int m = Integer.parseInt(time.substring)
+        int h = hour;
+        int m = min;
+        int s = seconds;
+        int total = (h * 3600) + (m * 60) + s;
+        for (int i = 1; i != total; i++) {
+            tick();
+        }
     }
 
     public String toString() {
